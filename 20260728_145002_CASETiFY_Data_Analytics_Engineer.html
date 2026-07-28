@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20260728_145002_CASETiFY_Data_Analytics_Engineer.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="yijun-shi">Yijun Shi</h1>
+<p>+86 13410458846 | yijunshi.data@gmail.com</p>
+<h2 id="summary">Summary</h2>
+<p>Data Analytics Engineer with an M.S. in Statistics and Data Science and hands-on experience building analytics-ready datasets, dimensional data models, data quality controls, KPI definitions, and Power BI reporting solutions. Proficient in SQL, Python, PySpark, Databricks, Delta Lake, PostgreSQL, Airflow, Power BI, and Git. Experienced in transforming tens of millions of multi-source records into governed, reporting-ready data and collaborating with international business and technical stakeholders to translate requirements into reliable analytics solutions.</p>
+<h2 id="education">Education</h2>
+<h3 id="ms-statistics-and-data-science">M.S. Statistics and Data Science</h3>
+<p><strong>KU Leuven</strong> | Leuven, Belgium | Aug 2021 - Aug 2023</p>
+<h3 id="bs-mathematics">B.S. Mathematics</h3>
+<p><strong>The Ohio State University</strong> | Columbus, OH, USA | Aug 2016 - May 2020</p>
+<h2 id="experience">Experience</h2>
+<h3 id="data-analyst--data-engineer">Data Analyst / Data Engineer</h3>
+<p><strong>CP2 Digital, APF Autoparts Group</strong> | Antwerp, Belgium | Aug 2024 - Aug 2025</p>
+<ul>
+<li>Built PySpark pipelines in Databricks to ingest, clean, transform, and model tens of millions of automotive parts records from 30-40 suppliers arriving via FTP three times per week.</li>
+<li>Standardized heterogeneous supplier feeds through reusable field mappings and transformation rules, creating a unified schema and analytics-ready Delta Lake datasets for downstream systems and reporting.</li>
+<li>Implemented SCD logic to merge incremental updates, track price changes and update timestamps, and maintain an auditable history of inventory availability.</li>
+<li>Established data quality controls for missing batches, unexpected values, and price fluctuations; reconciled outputs against source files and worked with vendor management stakeholders to resolve discrepancies before ERP delivery.</li>
+<li>Delivered end-to-end Power BI reporting by connecting to Microsoft Business Central, transforming ERP data with Power Query, designing a star schema, and defining consistent GMV, SKU performance, and margin metrics.</li>
+<li>Built dashboards that supported recurring KPI reporting and business decisions across product selection, pricing, and marketing.</li>
+<li>Created an internal VIN data asset by consolidating and validating 300K+ records from government and insurance sources, eliminating €2-per-query external decoding costs.</li>
+</ul>
+<h3 id="data-analyst-intern">Data Analyst Intern</h3>
+<p><strong>Agilytic</strong> | La Hulpe, Belgium | Oct 2022 - Mar 2023</p>
+<ul>
+<li>Partnered with the HR team to translate reporting and data requirements into a Python data collection and integration workflow spanning multiple candidate platforms.</li>
+<li>Defined field mappings and validation rules to standardize, clean, reconcile, and verify multi-source data before loading it into the company's internal environment.</li>
+<li>Documented transformation logic and investigated inconsistent source records to improve the reliability of downstream analysis.</li>
+</ul>
+<h2 id="selected-training">Selected Training</h2>
+<h3 id="data-engineering-bootcamp">Data Engineering Bootcamp</h3>
+<p><strong>Online</strong> | Jan 2026 - May 2026</p>
+<ul>
+<li>Completed structured training in SQL, Python, PostgreSQL, Docker, Apache Airflow, Terraform, dbt, dimensional modeling, and reproducible analytics workflows.</li>
+<li>Built containerized ETL pipelines, reporting-ready star schemas, and scheduled data workflows using version-controlled project structures.</li>
+</ul>
+<h3 id="web-development-bootcamp">Web Development Bootcamp</h3>
+<p><strong>Le Wagon</strong> | Tokyo, Japan | Oct 2025 - Dec 2025</p>
+<ul>
+<li>Built database-backed web applications using Ruby, JavaScript, PostgreSQL, HTML, CSS, Git, and Figma in a collaborative, multicultural product-development environment.</li>
+</ul>
+<h2 id="projects">Projects</h2>
+<h3 id="automated-daily-reading-digest-pipeline">Automated Daily Reading Digest Pipeline</h3>
+<p>Jun 2026 - Jul 2026</p>
+<ul>
+<li>Orchestrated PostgreSQL, Airflow initialization, scheduler, and webserver services with Docker Compose.</li>
+<li>Designed decoupled Airflow tasks for ingestion, parsing, rule-based validation, sampling, and email delivery, with explicit dependencies and retry policies.</li>
+<li>Implemented idempotent execution, guaranteed temporary-file cleanup, version-locked dependencies, and automatic service recovery to improve reliability and maintainability.</li>
+<li>Diagnosed an arbitrary-UID initialization failure and corrected the deployment using Airflow's official entrypoint and <code>_AIRFLOW_DB_MIGRATE</code>.</li>
+</ul>
+<h3 id="end-to-end-nyc-taxi-etl-pipeline">End-to-End NYC Taxi ETL Pipeline</h3>
+<p><strong>Python, PostgreSQL, Docker, Apache Airflow</strong> | Jan 2026 - May 2026</p>
+<ul>
+<li>Built a containerized ETL pipeline ingesting and validating 300K+ NYC TLC Parquet records, transforming the data with Python and Pandas, and loading curated outputs into PostgreSQL.</li>
+<li>Designed a star schema with fact and dimension tables to provide reusable, reporting-ready datasets for KPI analysis.</li>
+<li>Automated repeatable pipeline execution and monitoring with Apache Airflow and Docker Compose.</li>
+</ul>
+<h2 id="technical-skills">Technical Skills</h2>
+<ul>
+<li><strong>Analytics Engineering:</strong> SQL, Python, PySpark, ETL/ELT, data transformation, dimensional modeling, star schema, SCD, semantic modeling concepts</li>
+<li><strong>Data Platforms:</strong> Databricks, Delta Lake, PostgreSQL, Azure Cosmos DB, SSMS, Microsoft Business Central</li>
+<li><strong>BI and Reporting:</strong> Power BI, Power Query, KPI definition, business reporting, dashboard development, data visualization</li>
+<li><strong>Data Quality and Governance:</strong> validation rules, reconciliation, source-to-report checks, data mapping, documentation, troubleshooting</li>
+<li><strong>Workflow and DevOps:</strong> Apache Airflow, dbt, Docker, Docker Compose, Terraform, Git</li>
+<li><strong>Languages:</strong> Chinese (native), English (professional working proficiency)</li>
+</ul>
+
+</body>
+</html>
